@@ -6,13 +6,13 @@
  * [OG Discord](https://discord.gg/0glabs)
 
 
-## System Requirements
+## 🛠️System Requirements
 | Ram | cpu     | disk                      |
 | :-------- | :------- | :-------------------------------- |
 | `8GB`      | `4Core` | `500+ SSD` |
 
 
-## Dependecies
+## 📌Step 1: Installation packeges and dependencies
 ```shell
 sudo apt update
 sudo apt install -y lz4 jq make git gcc build-essential curl chrony unzip gzip snapd tmux bc
@@ -24,7 +24,7 @@ echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.bash_profile
 source .bash_profile
 go version
 ```
-# 📌Step 2: Set moniker and install node
+## 📌Step 2: Set moniker and install node
 Give your validator a name by which you can find yourself in explorer, put it in ""
 ```shell
 MONIKER="" 
@@ -98,7 +98,7 @@ sudo systemctl enable 0gchaind.service
 sudo systemctl start 0gchaind.service
 ```
 
-# 📌Step 3: Node Health Check
+## 📌Step 3: Node Health Check
 Follow the commands to check if your node is working properly
 
 1. Check version
@@ -119,9 +119,9 @@ tail -f -n 100 $HOME/.0gchain/log/chain.log
 If your node is installed and fully synchronized with the network, proceed with the creation of the validator.
 
 
-## 📝 Create Validator
+### 📝 Create Validator
 
-# 📌Step 1: Create or import wallet
+## 📌Step 1: Create or import wallet
 
 ```shell
 0gchaind keys add wallet --eth
@@ -133,7 +133,7 @@ Or if you had it before you can recover
 ```shell
 0gchaind keys add WALLET_NAME --eth --recover
 ```
-# 📌Step 2: Request test tokens to your wallet address
+## 📌Step 2: Request test tokens to your wallet address
 We request the private key from our EVM address
 ```shell
 0gchaind keys unsafe-export-eth-key wallet # or your wallet name
@@ -144,11 +144,11 @@ We keep this private key with us
 Go to the metamask and import the wallet using it:
 We open the [Faucet 0G Link 🚰](https://faucet.0g.ai/) and request tokens to the metamask address we received
 
-# 📌Step 3: Check your balance in terminal
+## 📌Step 3: Check your balance in terminal
 ```shell
 0gchaind q bank balances $(0gchaind keys show $WALLET_NAME -a)
 ```
-# 📌Step 4: Create validator
+## 📌Step 4: Create validator
 Replace YOUR_WALLET with your wallet name
 ```shell
 0gchaind tx staking create-validator \
@@ -170,19 +170,19 @@ Replace YOUR_WALLET with your wallet name
 -y
 ```
 
-# 📌Step 5: Backup. 
+## 📌Step 5: Backup. 
 ```shell
 cat $HOME/.0gchain/config/priv_validator_key.json
 ```
 
-## Delegate tokens
+### Delegate tokens
 
 ```shell
 0gchaind tx staking delegate $(0gchaind keys show WALLET_NAME --bech val -a) 1000000ua0gi --from WALLET_NAME -y
 ```
 
 --------------------------------------
-## Useful commands
+### Useful commands
 
 * Replace WALLET_NAME
 
