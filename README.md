@@ -3,7 +3,8 @@
 
 
 ### Official Links
- * [OG Discord](https://discord.gg/0glabs)
+* [OG Discord](https://discord.gg/0glabs)
+* [Our telegram channel](https://t.me/dropper7)
 
 
 ## 🛠️System Requirements
@@ -232,9 +233,9 @@ sudo rm /etc/systemd/system/0gchaind.service
 rm -rf $HOME/.0gchain $HOME/0g-chain
 ```
 
-## Check validators list in explorer
+## Check the validators list in Explorer
 https://explorer.coinhunterstr.com/0G-Newton/staking
 
 
-### fil the google form:
+### fill out the google form:
 https://docs.google.com/forms/d/e/1FAIpQLScsa1lpn43F7XAydVlKK_ItLGOkuz2fBmQaZjecDn76kysQsw/viewform?ts=6617a343
