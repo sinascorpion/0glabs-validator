@@ -3,7 +3,7 @@
 
 
 ### Official Links
-* [OG Discord](https://discord.gg/0glabs)
+* [0G Discord](https://discord.gg/0glabs)
 * [Our telegram channel](https://t.me/dropper7)
 
 
