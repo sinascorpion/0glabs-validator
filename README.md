@@ -1,4 +1,4 @@
-📝 Manual installation
+#📝 Manual installation
 📌Step 1: Installation packeges and dependencies
 Copy
 # Install dependencies for building from source
